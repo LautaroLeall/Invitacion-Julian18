@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #081536;
+  --color-navy-900: #0d2559;
+  --color-navy-800: #132f70;
+  --color-navy-700: #1c3f8c;
+  --color-gold-500: #f0b90b;
+  --color-gold-400: #f5c518;
+  --color-gold-300: #ffd84d;
+  --color-cream: #f5f0e2;
+  --color-cream-2: #ece5d1;
+  --color-ink: #31344a;
+  --color-slate: #565a72;
+  --color-line: rgba(240, 185, 11, 0.35);
+
+  --font-baloo: "Baloo 2", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-cream font-manrope overflow-hidden w-full h-full;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    @apply w-full h-dvh relative overflow-hidden;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
