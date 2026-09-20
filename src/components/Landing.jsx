@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 export default function Landing({ onNavigate }) {
   const letters = [
-    { src: "./j-globo.png", alt: "J" },
-    { src: "./u-globo.png", alt: "U" },
-    { src: "./l-globo.png", alt: "L" },
-    { src: "./i-globo.png", alt: "I" },
-    { src: "./a-globo.png", alt: "A" },
-    { src: "./n-globo.png", alt: "N" },
+    { src: "/j-globo.png", alt: "J" },
+    { src: "/u-globo.png", alt: "U" },
+    { src: "/l-globo.png", alt: "L" },
+    { src: "/i-globo.png", alt: "I" },
+    { src: "/a-globo.png", alt: "A" },
+    { src: "/n-globo.png", alt: "N" },
   ];
 
   return (
@@ -147,7 +147,7 @@ export default function Landing({ onNavigate }) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.7, ease: [0.2, 0.8, 0.3, 1] }}
         className="absolute top-[max(2.8vmin,20px)] right-[max(2.4vmin,32px)] z-30 w-[clamp(152px,32vmin,182px)] drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
-        src="./escudo-boca.png"
+        src="/escudo-boca.png"
         alt="Escudo Club Atlético Boca Juniors"
       />
 
@@ -163,7 +163,7 @@ export default function Landing({ onNavigate }) {
                 ease: [0.2, 0.8, 0.3, 1],
               }}
               className="h-[clamp(88px,22vmin,158px)] w-auto drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
-              src="./18-numero.png"
+              src="/18-numero.png"
               alt="18"
             />
             <div
@@ -278,7 +278,7 @@ export default function Landing({ onNavigate }) {
           delay: 0.3,
         }}
         className="absolute bottom-[clamp(6px,2vmin,18px)] right-[clamp(6px,2vmin,18px)] z-20 w-[clamp(152px,32vmin,182px)] rounded-[10px] drop-shadow-[0_8px_14px_rgba(0,0,0,0.35)]"
-        src="./cancha-boca.png"
+        src="/cancha-boca.png"
         alt="Bombonera"
       />
     </motion.section>
