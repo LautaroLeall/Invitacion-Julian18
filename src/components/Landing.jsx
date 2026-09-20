@@ -145,8 +145,10 @@ export default function Landing({ onNavigate }) {
       <motion.img
         initial={{ opacity: 0, y: -14, scale: 0.85 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
+        whileHover={{ scale: 1.08, rotate: 5 }}
+        whileTap={{ scale: 0.9, rotate: -5 }}
         transition={{ duration: 0.7, ease: [0.2, 0.8, 0.3, 1] }}
-        className="absolute top-[max(2.8vmin,20px)] right-[max(2.4vmin,32px)] z-30 w-[clamp(152px,32vmin,182px)] drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
+        className="absolute top-[max(2.8vmin,20px)] right-[max(2.4vmin,32px)] z-30 w-[clamp(152px,32vmin,182px)] cursor-pointer drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
         src="/escudo-boca.png"
         alt="Escudo Club Atlético Boca Juniors"
       />
@@ -157,12 +159,14 @@ export default function Landing({ onNavigate }) {
             <motion.img
               initial={{ opacity: 0, y: 10, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ scale: 1.1, rotate: -5 }}
+              whileTap={{ scale: 0.85, rotate: 5 }}
               transition={{
                 delay: 0.1,
                 duration: 0.6,
                 ease: [0.2, 0.8, 0.3, 1],
               }}
-              className="h-[clamp(88px,22vmin,158px)] w-auto drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
+              className="h-[clamp(88px,22vmin,158px)] w-auto cursor-pointer drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
               src="/18-numero.png"
               alt="18"
             />
@@ -175,12 +179,14 @@ export default function Landing({ onNavigate }) {
                   key={i}
                   initial={{ opacity: 0, y: 10, scale: 0.8 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
+                  whileHover={{ scale: 1.15, y: -5 }}
+                  whileTap={{ scale: 0.8, y: 5 }}
                   transition={{
                     delay: 0.18 + i * 0.06,
                     duration: 0.5,
                     ease: [0.2, 0.8, 0.3, 1],
                   }}
-                  className="h-[clamp(48px,8.4vmin,78px)] w-auto drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
+                  className="h-[clamp(48px,8.4vmin,78px)] w-auto cursor-pointer drop-shadow-[0_4px_8px_rgba(0,0,0,0.3)]"
                   src={letter.src}
                   alt={letter.alt}
                 />
@@ -196,13 +202,14 @@ export default function Landing({ onNavigate }) {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            whileTap={{ scale: 0.95 }}
             transition={{
               delay: 0.5,
               duration: 0.55,
               ease: [0.2, 0.8, 0.3, 1],
             }}
             onClick={() => onNavigate("misa")}
-            className="group relative flex w-full max-w-sm items-center gap-4 rounded-2xl bg-linear-to-r from-white/40 to-white/10 p-4 text-left shadow-lg backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-xl hover:from-white/50 hover:to-white/20"
+            className="group relative flex w-full max-w-sm cursor-pointer items-center gap-4 rounded-2xl bg-linear-to-r from-white/40 to-white/10 p-4 text-left shadow-lg backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-xl hover:from-white/50 hover:to-white/20"
           >
             <div className="flex flex-col items-center justify-center rounded-xl bg-navy-900/10 px-3 py-2 text-navy-900">
               <span className="font-baloo text-3xl font-extrabold leading-none">
@@ -233,13 +240,14 @@ export default function Landing({ onNavigate }) {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            whileTap={{ scale: 0.95 }}
             transition={{
               delay: 0.6,
               duration: 0.55,
               ease: [0.2, 0.8, 0.3, 1],
             }}
             onClick={() => onNavigate("fiesta")}
-            className="group relative flex w-full max-w-sm items-center gap-4 rounded-2xl bg-linear-to-r from-white/40 to-white/10 p-4 text-left shadow-lg backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-xl hover:from-white/50 hover:to-white/20"
+            className="group relative flex w-full max-w-sm cursor-pointer items-center gap-4 rounded-2xl bg-linear-to-r from-white/40 to-white/10 p-4 text-left shadow-lg backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-xl hover:from-white/50 hover:to-white/20"
           >
             <div className="flex flex-col items-center justify-center rounded-xl bg-navy-900/10 px-3 py-2 text-navy-900">
               <span className="font-baloo text-3xl font-extrabold leading-none">
@@ -271,13 +279,12 @@ export default function Landing({ onNavigate }) {
 
       <motion.img
         animate={{ y: ["-4%", "4%", "-4%"] }}
+        whileHover={{ scale: 1.05, rotate: -2 }}
+        whileTap={{ scale: 0.95, rotate: 2 }}
         transition={{
-          duration: 5.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.3,
+          y: { duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 0.3 },
         }}
-        className="absolute bottom-[clamp(6px,2vmin,18px)] right-[clamp(6px,2vmin,18px)] z-20 w-[clamp(152px,32vmin,182px)] rounded-[10px] drop-shadow-[0_8px_14px_rgba(0,0,0,0.35)]"
+        className="absolute bottom-[clamp(6px,2vmin,18px)] right-[clamp(6px,2vmin,18px)] z-20 w-[clamp(152px,32vmin,182px)] cursor-pointer rounded-[10px] drop-shadow-[0_8px_14px_rgba(0,0,0,0.35)]"
         src="/cancha-boca.png"
         alt="Bombonera"
       />

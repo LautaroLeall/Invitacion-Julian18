@@ -4,7 +4,7 @@ import Landing from "./components/Landing";
 import Misa from "./components/Misa";
 import Fiesta from "./components/Fiesta";
 import AudioController from "./components/AudioController";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   const [activeScreen, setActiveScreen] = useState("landing"); // 'landing', 'misa', 'fiesta'
@@ -15,13 +15,14 @@ function App() {
   return (
     <>
       <AudioController activeScreen={activeScreen} isMuted={isMuted} />
-      <button
+      <motion.button
+        whileTap={{ scale: 0.85 }}
         onClick={toggleMute}
-        className="fixed top-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-line bg-navy-950/60 text-gold-400 backdrop-blur-md transition-colors hover:bg-navy-900 focus-visible:outline-2 focus-visible:outline-gold-400 focus-visible:outline-offset-2"
+        className="fixed top-4 right-4 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-line bg-navy-950/60 text-gold-400 backdrop-blur-md transition-colors hover:bg-navy-900 focus-visible:outline-2 focus-visible:outline-gold-400 focus-visible:outline-offset-2"
         aria-label="Activar o silenciar la música"
       >
         {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-      </button>
+      </motion.button>
 
       <div className="relative h-full w-full">
         <AnimatePresence mode="wait">
