@@ -3,10 +3,34 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>18 de Julián</title>
 
-  <!-- Fuentes -->
+  <!-- Optimización para Móviles y Web App -->
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#081536" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Título y Descripción -->
+  <title>¡Los 18 de Julián!</title>
+  <meta name="description"
+    content="Te invito a festejar mis 18 años. Confirmá tu asistencia y mirá todos los detalles del evento." />
+  <meta name="author" content="Julián" />
+
+  <!-- Íconos (Favicon) -->
+  <link rel="icon" type="image/png" href="/escudo-boca.png" />
+  <link rel="apple-touch-icon" href="/escudo-boca.png" />
+
+  <!-- Open Graph / Redes Sociales (WhatsApp, Facebook, etc) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="¡Los 18 de Julián!" />
+  <meta property="og:description"
+    content="Estás invitado a festejar mis 18 años. ¡Mirá los detalles y confirmá asistencia!" />
+  <meta property="og:image" content="/escudo-boca.png" />
+  <meta property="og:url" content="https://cumple-18-julian.netlify.app/" />
+  <meta property="og:site_name" content="Los 18 de Julián" />
+
+  <!-- Preconexión a Google Fonts para cargar más rápido -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -15,6 +39,7 @@
 </head>
 
 <body>
+  <noscript>Necesitas activar JavaScript para ver esta invitación.</noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
