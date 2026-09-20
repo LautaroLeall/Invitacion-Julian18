@@ -22,7 +22,7 @@ export default function Misa({ onNavigate }) {
           animate={{ rotate: [-7, -4, -7], scale: [1, 1.03, 1] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
           className="w-[clamp(280px,78vmin,680px)] opacity-15 saturate-110 blur-[1.5px]"
-          src="./escudo-boca.png"
+          src="/escudo-boca.png"
           alt=""
           aria-hidden="true"
         />
@@ -35,7 +35,7 @@ export default function Misa({ onNavigate }) {
       >
         <img
           className="w-full drop-shadow-[0_10px_16px_rgba(0,0,0,0.4)]"
-          src="./globos-arriba.png"
+          src="/globos-arriba.png"
           alt=""
         />
       </motion.div>
@@ -49,7 +49,7 @@ export default function Misa({ onNavigate }) {
           delay: 0.4,
         }}
         className="pointer-events-none absolute top-1/2 z-10 hidden w-[clamp(88px,21vmin,180px)] rounded-[14px] opacity-95 drop-shadow-[0_12px_20px_rgba(0,0,0,0.45)] sm:block left-[clamp(-24px,-3.4vmin,-8px)]"
-        src="./cancha-boca.png"
+        src="/cancha-boca.png"
         alt="Bombonera"
       />
 
