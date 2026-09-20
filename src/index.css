@@ -33,7 +33,7 @@
     @apply cursor-pointer;
   }
 
-  /* Ocultar cartel flotante "Powered by Netlify" */
+  /* Ocultar cartel flotante "Powered by Netlify" (incluyendo iframes) */
   #netlify-badge,
   netlify-toolbar,
   #netlify-toolbar,
@@ -47,7 +47,12 @@
   #nl-card,
   .nl-card,
   #nl-hide,
-  .nl-hide {
+  .nl-hide,
+  iframe[id*="netlify"],
+  iframe[name*="netlify"],
+  iframe[src*="netlify"],
+  iframe[id*="nl-"],
+  div[id*="nl-hud"] {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
