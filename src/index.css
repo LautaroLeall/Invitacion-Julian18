@@ -32,4 +32,19 @@
   button {
     @apply cursor-pointer;
   }
+
+  /* Ocultar cartel flotante "Powered by Netlify" */
+  #netlify-badge,
+  netlify-toolbar,
+  #netlify-toolbar,
+  .netlify-toolbar,
+  netlify-drawer,
+  #netlify-drawer,
+  .netlify-drawer,
+  #netlify-branding {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 }
