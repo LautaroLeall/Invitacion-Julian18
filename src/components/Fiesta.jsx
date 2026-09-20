@@ -27,11 +27,12 @@ export default function Fiesta({ onNavigate }) {
       <Confetti />
 
       {/* Background elements */}
-      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
         <motion.img
           animate={{ rotate: [-7, -4, -7], scale: [1, 1.03, 1] }}
+          whileTap={{ scale: 0.95, opacity: 0.3 }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[clamp(280px,78vmin,680px)] opacity-15 saturate-110 blur-[1.5px]"
+          className="w-[clamp(280px,78vmin,680px)] cursor-pointer opacity-15 saturate-110 blur-[1.5px]"
           src="/escudo-boca.png"
           alt=""
           aria-hidden="true"
@@ -52,13 +53,11 @@ export default function Fiesta({ onNavigate }) {
 
       <motion.img
         animate={{ y: ["-50%", "-46%", "-50%"] }}
+        whileTap={{ scale: 0.9, rotate: 2 }}
         transition={{
-          duration: 5.4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.4,
+          y: { duration: 5.4, repeat: Infinity, ease: "easeInOut", delay: 0.4 },
         }}
-        className="pointer-events-none absolute top-1/2 z-10 hidden w-[clamp(88px,21vmin,180px)] rounded-[14px] opacity-95 drop-shadow-[0_12px_20px_rgba(0,0,0,0.45)] sm:block right-[clamp(-24px,-3.4vmin,-8px)]"
+        className="absolute top-1/2 z-10 hidden w-[clamp(88px,21vmin,180px)] cursor-pointer rounded-[14px] opacity-95 drop-shadow-[0_12px_20px_rgba(0,0,0,0.45)] sm:block right-[clamp(-24px,-3.4vmin,-8px)]"
         src="/cancha-boca.png"
         alt="Bombonera"
       />
@@ -131,13 +130,14 @@ export default function Fiesta({ onNavigate }) {
       />
 
       <div className="relative z-20 flex h-full flex-col overflow-y-auto overflow-x-hidden p-[clamp(10px,3.6vmin,30px)_clamp(14px,5vmin,40px)]">
-        <button
+        <motion.button
+          whileTap={{ scale: 0.9 }}
           onClick={() => onNavigate("landing")}
           className="sticky top-0 z-50 mb-4 flex flex-none cursor-pointer items-center gap-1.5 self-start rounded-full border border-gold-400/30 bg-navy-950/80 backdrop-blur-md p-[clamp(5px,1.3vmin,9px)_clamp(10px,2.4vmin,16px)] text-[clamp(10.5px,2.2vmin,13px)] font-bold text-gold-300 shadow-lg transition-transform hover:scale-105"
         >
           <ArrowLeft className="h-[clamp(11px,2.2vmin,15px)] w-[clamp(11px,2.2vmin,15px)]" />{" "}
           Volver
-        </button>
+        </motion.button>
 
         <div className="mx-auto flex w-full max-w-115 flex-1 flex-col items-center justify-center gap-8 pb-12 text-center">
           <div className="flex flex-col items-center gap-3">
@@ -177,7 +177,8 @@ export default function Fiesta({ onNavigate }) {
               <p className="m-0 text-sm font-medium text-[#c3cbe6]">22:00 hs</p>
             </div>
 
-            <a
+            <motion.a
+              whileTap={{ scale: 0.95 }}
               href="https://maps.app.goo.gl/wuuVrjucZSJ98BXV8"
               target="_blank"
               rel="noopener noreferrer"
@@ -198,7 +199,7 @@ export default function Fiesta({ onNavigate }) {
               <span className="mt-2 rounded-full border border-gold-400/50 bg-gold-400/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-gold-300">
                 Ver en mapa
               </span>
-            </a>
+            </motion.a>
           </div>
 
           <div className="w-full">
