@@ -1,5 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Gift, CreditCard, Landmark, User, Copy, CheckCircle2 } from "lucide-react";
+import {
+  X,
+  Gift,
+  CreditCard,
+  Landmark,
+  User,
+  Copy,
+  CheckCircle2,
+} from "lucide-react";
 import { useState } from "react";
 
 export default function GiftModal({ isOpen, onClose }) {
@@ -14,7 +22,7 @@ export default function GiftModal({ isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,65 +51,92 @@ export default function GiftModal({ isOpen, onClose }) {
                 Opciones de Regalo
               </h2>
               <p className="mt-2 text-sm text-[#c3cbe6] leading-relaxed">
-                El mejor regalo es tu presencia, pero si deseás tener un detalle conmigo, podés hacerlo a través de esta cuenta:
+                El mejor regalo es tu presencia, pero si deseás tener un detalle
+                conmigo, podés hacerlo a través de esta cuenta:
               </p>
             </div>
 
             <div className="flex flex-col gap-3 rounded-2xl bg-black/20 p-4">
-              
               {/* Entidad */}
               <div className="flex flex-col">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">Entidad</span>
+                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">
+                  Entidad
+                </span>
                 <div className="flex items-center gap-2">
                   <Landmark className="h-4 w-4 text-gold-400" />
-                  <span className="font-manrope text-sm font-semibold">Naranja X</span>
+                  <span className="font-manrope text-sm font-semibold">
+                    Naranja X
+                  </span>
                 </div>
               </div>
 
               {/* Titular */}
               <div className="flex flex-col">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">Titular</span>
+                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">
+                  Titular
+                </span>
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4 text-gold-400" />
-                  <span className="font-manrope text-sm font-semibold">Diego Julian Toledo</span>
+                  <span className="font-manrope text-sm font-semibold">
+                    Diego Julian Toledo
+                  </span>
                 </div>
-                <span className="text-xs text-white/50 pl-6">CUIL: 20490497863</span>
+                <span className="text-xs text-white/50 pl-6">
+                  CUIL: 20490497863
+                </span>
               </div>
 
               {/* CBU */}
               <div className="flex flex-col mt-1">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">CBU / CVU</span>
+                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">
+                  CBU / CVU
+                </span>
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
                     <CreditCard className="h-4 w-4 text-gold-400" />
-                    <span className="font-manrope text-sm font-semibold font-mono">4530000800016672356291</span>
+                    <span className="text-sm font-semibold font-mono">
+                      4530000800016672356291
+                    </span>
                   </div>
-                  <button 
+                  <button
                     onClick={() => handleCopy("4530000800016672356291", "cbu")}
                     className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold-400/10 text-gold-400 transition-colors hover:bg-gold-400/20"
                   >
-                    {copiedField === "cbu" ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    {copiedField === "cbu" ? (
+                      <CheckCircle2 className="h-4 w-4" />
+                    ) : (
+                      <Copy className="h-4 w-4" />
+                    )}
                   </button>
                 </div>
               </div>
 
               {/* Alias */}
               <div className="flex flex-col mt-1">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">Alias</span>
+                <span className="text-[11px] font-bold uppercase tracking-widest text-gold-300/80">
+                  Alias
+                </span>
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="h-4 w-4 flex items-center justify-center text-gold-400 text-lg">@</span>
-                    <span className="font-manrope text-sm font-semibold">juliantoledo49</span>
+                    <span className="h-4 w-4 flex items-center justify-center text-gold-400 text-lg">
+                      @
+                    </span>
+                    <span className="font-manrope text-sm font-semibold">
+                      juliantoledo49
+                    </span>
                   </div>
-                  <button 
+                  <button
                     onClick={() => handleCopy("juliantoledo49", "alias")}
                     className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold-400/10 text-gold-400 transition-colors hover:bg-gold-400/20"
                   >
-                    {copiedField === "alias" ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    {copiedField === "alias" ? (
+                      <CheckCircle2 className="h-4 w-4" />
+                    ) : (
+                      <Copy className="h-4 w-4" />
+                    )}
                   </button>
                 </div>
               </div>
-              
             </div>
 
             <button

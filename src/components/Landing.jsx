@@ -297,11 +297,13 @@ export default function Landing({ onNavigate }) {
               Opciones de Regalo
             </span>
           </motion.button>
-
         </div>
       </div>
 
-      <GiftModal isOpen={isGiftModalOpen} onClose={() => setIsGiftModalOpen(false)} />
+      <GiftModal
+        isOpen={isGiftModalOpen}
+        onClose={() => setIsGiftModalOpen(false)}
+      />
 
       <motion.img
         animate={{ y: ["-4%", "4%", "-4%"] }}
