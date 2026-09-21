@@ -1,7 +1,11 @@
-import { Star, Church, PartyPopper, ArrowRight } from "lucide-react";
+import { Star, Church, PartyPopper, ArrowRight, Gift } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import GiftModal from "./GiftModal";
 
 export default function Landing({ onNavigate }) {
+  const [isGiftModalOpen, setIsGiftModalOpen] = useState(false);
+
   const letters = [
     { src: "/j-globo.png", alt: "J" },
     { src: "/u-globo.png", alt: "U" },
@@ -274,8 +278,30 @@ export default function Landing({ onNavigate }) {
               <ArrowRight className="h-5 w-5" />
             </div>
           </motion.button>
+
+          {/* Botón de Regalo */}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{
+              delay: 0.7,
+              duration: 0.55,
+              ease: [0.2, 0.8, 0.3, 1],
+            }}
+            onClick={() => setIsGiftModalOpen(true)}
+            className="group relative flex w-full max-w-sm cursor-pointer items-center justify-center gap-2.5 rounded-2xl bg-linear-to-r from-gold-300 to-gold-500 p-4 text-center shadow-[0_4px_20px_rgba(240,185,11,0.25)] transition-all hover:-translate-y-1 hover:shadow-[0_6px_25px_rgba(240,185,11,0.4)]"
+          >
+            <Gift className="h-5 w-5 text-navy-950" />
+            <span className="font-baloo text-lg font-bold text-navy-950">
+              Opciones de Regalo
+            </span>
+          </motion.button>
+
         </div>
       </div>
+
+      <GiftModal isOpen={isGiftModalOpen} onClose={() => setIsGiftModalOpen(false)} />
 
       <motion.img
         animate={{ y: ["-4%", "4%", "-4%"] }}
