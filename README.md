@@ -1,17 +1,63 @@
-# React + Vite
+# ⚽ Invitación Cumpleaños 18 - Julián (Boca Juniors)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Proyecto web interactivo y animado desarrollado en **React + Vite**, diseñado como una invitación digital temática de **Boca Juniors** para los **18 años de Julián**.
 
-Currently, two official plugins are available:
+Incluye música ambiental dedicada para la ceremonia y la fiesta, animaciones fluidas e interactivas con **Framer Motion**, efectos visuales de celebración con **Canvas Confetti**, una sección flotante para regalos (CBU/Alias) y un formulario RSVP con confirmación directa por **WhatsApp**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologías principales
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+- ⚛️ React 19 (Vite 6)
+- 🎯 HTML5 + CSS3 / Tailwind CSS v4
+- ⚙️ JavaScript (ES6+)
+- ⚽ Temática Boca Juniors (Estilos oscuros premium y dorados)
+- 🎵 Audio HTML5 (Auto-play seguro y pistas dinámicas)
+- 🎬 Framer Motion & Canvas Confetti
+- 🎨 Lucide React Icons
+- 📲 Integración Directa con WhatsApp Web API
+```
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# Invitacion-Julian18
+## 📂 Estructura del proyecto
+
+```text
+Julian-18/
+├── public/                       # Archivos estáticos, imágenes de Boca y música (MP3)
+│   ├── fiesta-audio.mp3
+│   ├── misa-audio.mp3
+│   └── _redirects                # Reglas de enrutamiento para Netlify
+├── src/
+│   ├── components/               # Componentes modulares
+│   │   ├── Confetti.jsx          # Lógica de confeti interactivo
+│   │   ├── Countdown.jsx         # Cuenta regresiva para los eventos
+│   │   ├── Fiesta.jsx            # Vista del salón Hadassah Eventos
+│   │   ├── GiftModal.jsx         # Modal de regalos con copiado automático (CBU/Alias)
+│   │   ├── Landing.jsx           # Portada animada e interactiva principal
+│   │   ├── Misa.jsx              # Vista de la ceremonia (Parroquia San Juan Bosco)
+│   │   └── RSVPForm.jsx          # Formulario dinámico conectado a WhatsApp
+│   ├── App.jsx                   # Orquestación de vistas y controlador de audio
+│   ├── index.css                 # Estilos globales y configuraciones de Tailwind
+│   └── main.jsx                  # Punto de entrada de la aplicación
+├── index.html                    # Plantilla base con Meta Tags (OpenGraph) optimizada
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Instalación y uso
+
+```bash
+# 1. Instalar dependencias:
+npm install
+
+# 2. Iniciar el servidor de desarrollo local:
+npm run dev
+
+# 3. Compilar para producción (optimizado para Netlify):
+npm run build
+```
